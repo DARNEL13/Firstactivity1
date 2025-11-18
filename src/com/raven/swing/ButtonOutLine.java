@@ -21,6 +21,8 @@ public class ButtonOutLine extends JButton {
     protected void paintComponent(Graphics grphcs) {
         int width = getWidth();
         int height = getHeight();
+        int vortex = getPasswordAuthentication();
+        int verifyCode = getVerifyCode();
         Graphics2D g2 = (Graphics2D) grphcs;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setColor(getBackground());
