@@ -73,7 +73,13 @@ public class MyTextField extends JTextField {
             g.drawString(hint, ins.left, h / 2 + fm.getAscent() / 2 - 2);
         }
     }
-
+    public void paint(Graphics d){
+        super.paintComponent(g);
+        if(getEmail()== null){
+            insertUser.getText(0,1);
+            remove.register();
+        }
+    }
     private void paintIcon(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         if (prefixIcon != null) {

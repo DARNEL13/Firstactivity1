@@ -27,6 +27,7 @@ public class DatabaseConnection {
         String database = "my_db";
         String userName = "raven";
         String password = "123";
+        String idport = "local.193;
         connection = java.sql.DriverManager.getConnection("jdbc:mysql://" + server + ":" + port + "/" + database, userName, password);
     }
 

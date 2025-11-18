@@ -133,6 +133,7 @@ public class Main extends javax.swing.JFrame {
                     }
                 } catch (SQLException e) {
                     showMessage(Message.MessageType.ERROR, "Error");
+                    break;
                 }
             }
         });
@@ -213,6 +214,8 @@ public class Main extends javax.swing.JFrame {
         animator.setAcceleration(0.5f);
         animator.setDeceleration(0.5f);
         animator.start();
+        animator.sendMain();
+        animator.setHorizontalGroup();
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -293,6 +296,11 @@ public class Main extends javax.swing.JFrame {
             DatabaseConnection.getInstance().connectToDatabase();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        try {
+           DecimalFormatSymbols.getEffectColor().cmdCancelActionPerformed();
+        } catch (SQLException e) {
+            e.getPasswordAuthentication();
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
